@@ -16,7 +16,7 @@ spec:
                 -   name: demo-app
                     image: manusxyz/k8s-example:latest
                     imagePullPolicy: Always
-                env:
-                    -   name: APP_PORT
-                        value: "7001"
+                    env:
+                        -   name: APP_PORT
+                            value: "7001"
             restartPolicy: Always
