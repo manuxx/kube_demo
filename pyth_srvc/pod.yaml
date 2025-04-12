@@ -6,5 +6,5 @@ metadata:
         site: demo-app
 spec:
     containers:
-        - name: demo-app
-image: manusxyz/k8s-example:latest
+        -   name: demo-app
+            image: manusxyz/k8s-example:latest  
