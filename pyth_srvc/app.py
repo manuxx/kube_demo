@@ -11,4 +11,5 @@ def hello():
 	return {"Hello": "World"}
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=9000)
+    app_port = int(os.getenv('APP_PORT', 9000))
+    uvicorn.run(app, host="0.0.0.0", port=app_port)
