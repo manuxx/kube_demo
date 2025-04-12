@@ -16,9 +16,16 @@ spec:
                 -   name: demo-app
                     image: manusxyz/k8s-example:latest
                     imagePullPolicy: Always
+                    requests:
+                        cpu: "550m"
+                        memory: "1100Mi"
+                        limits:
+                            cpu: "650m"
+                            memory: "1100Mi"
                     env:
                         -   name: SOME_ENT_VAR1
                             value: "qqqqqqqq"
+                            resources:
                     envFrom:
                         -   configMapRef:
                                 name: demo-app-configmap
