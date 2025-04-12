@@ -16,9 +16,10 @@ spec:
                 -   name: demo-app
                     image: manusxyz/k8s-example:latest
                     imagePullPolicy: Always
-                    requests:
-                        cpu: "550m"
-                        memory: "1100Mi"
+                    resources:
+                        requests:
+                            cpu: "550m"
+                            memory: "1100Mi"
                         limits:
                             cpu: "650m"
                             memory: "1100Mi"
