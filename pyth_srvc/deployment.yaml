@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: demo-app
+spec:
+    selector:
+        matchLabels:
+            app: demo-app
+    replicas: 1
+    template:
+        metadata:
+            labels:
+                app: demo-app
+        spec:
+            containers:
+                -   name: demo-app
+                    image: manusxyz/k8s-example:latest
+                    imagePullPolicy: Always
+                    env:
+                        -   name: SOME_ENT_VAR1
+                            value: "qqqqqqqq"
+                    envFrom:
+                        -   configMapRef:
+                                name: demo-app-configmap
+            restartPolicy: Always
